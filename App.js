@@ -1,18 +1,21 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
-import ListingEditScreen from './app/screens/ListingEditScreen';
-import ListingsScreen from './app/screens/ListingsScreen';
-import LoginScreen from './app/screens/LoginScreen';
 
+import { StyleSheet } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import WelcomeScreen from './app/screens/WelcomeScreen';
+import AuthNavigator from './app/navigation/AuthNavigator';
+import navigationTheme from './app/navigation/navigationTheme';
+import AppNavigator from './app/navigation/AppNavigator';
 
 
 
 export default function App() {
-  
-  
-  return (
-   <ListingEditScreen/>
+
+
+  return(
+    <NavigationContainer theme={navigationTheme}>
+     <AppNavigator/> 
+    </NavigationContainer>
   );
 
 }
